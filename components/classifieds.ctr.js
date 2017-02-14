@@ -3,7 +3,9 @@
 
   angular
     .module("ngClassifieds")
-    .controller("classifiedsCtrl", function() {
+    .controller("classifiedsCtrl", function($scope) {
 
+      $scope.name = "Derek";
+      
     });
 })();
