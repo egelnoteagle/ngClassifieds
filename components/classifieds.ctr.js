@@ -4,11 +4,6 @@
   angular
     .module("ngClassifieds")
     .controller("classifiedsCtrl", function($scope) {
-
-      $scope.name = {
-        first: "Derek",
-        last: "Egel"
-      };
-
+      $scope.name = "Derek";
     });
 })();
