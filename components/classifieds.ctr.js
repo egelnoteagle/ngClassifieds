@@ -7,6 +7,7 @@
 
       classifiedsFactory.getClassifieds().then(function(classifieds) {
         $scope.classifieds = classifieds.data;
+        $scope.categories = getCategories($scope.classifieds);
       });
 
       var contact = {
@@ -52,10 +53,10 @@
           .ok('Yes')
           .cancel('No')
           .targetEvent(event);
-        $mdDialog.show(confirm).then(function () {
+        $mdDialog.show(confirm).then(function() {
           var index = $scope.classifieds.indexOf(classified);
           $scope.classifieds.splice(index, 1);
-        }, function () {
+        }, function() {
 
         });
       }
@@ -67,6 +68,16 @@
           .position('top, right')
           .hideDelay(3000)
         );
+      }
+
+      function getCategories(classifieds) {
+        var categories = [];
+        angular.forEach(classifieds, function(item) {
+          angular.forEach(item.categories, function(category) {
+            categories.push(category);
+          });
+        });
+        return _.uniq(categories);
       }
 
     });
