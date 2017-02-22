@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/egelnoteagle/ngClassifieds/issues"
   },
-  "homepage": "https://github.com/egelnoteagle/ngClassifieds#readme"
+  "homepage": "https://github.com/egelnoteagle/ngClassifieds#readme",
+  "dependencies": {
+    "angular": "1.6.2",
+    "angular-animate": "^1.6.2",
+    "angular-aria": "^1.6.2",
+    "angular-ui-router": "^0.4.2"
+  }
 }
